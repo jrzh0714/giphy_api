@@ -2,20 +2,23 @@
 <html>
 <head>
   <title>Giphy Api</title>
-  <script type="text/javascript" src="script.js"></script>
-  <link href="style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <link  rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="script.js"></script>
+    
 </head>
 <body>
    
-    <h1 class="text-center lead">
+    <p class="text-center lead" style="font-size:50px;">
         Choose Your Gif
-    </h1>
+    </p>
     <form action="javascript:search();" class="text-center">
-  <input id="query" type="text" size="35" name="Choose a gif theme"><br>
-  <input type="submit" value="Submit"  class="lead">
-  <input type="button" value="reset" onclick="window.location.reload()" class="lead">
+  <input id="query" type="text" size="35" placeholder="Choose a gif theme"><br>
+  <input type="submit" value="Submit"  class="lead" >
+  <input type="button" value="Random GIF!" onclick="random();" class="lead" >
+  <input type="button" value="Trending GIF!" onclick="trending();" class="lead" >
+  <input type="button" value="Reset" onclick="window.location.reload()" class="lead">
 </form>
     <div class="container">
     </div>

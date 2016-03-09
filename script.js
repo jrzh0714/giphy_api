@@ -1,6 +1,5 @@
 function search(){
     var x = document.getElementById("query").value;
-    console.log(x);
     var result = "https://api.giphy.com/v1/gifs/search?q="+x+"&api_key=dc6zaTOxFJmzC";
     var js;
     $.getJSON(result, 
@@ -8,12 +7,37 @@ function search(){
         for (var i=0;i<10;i++){
         js = data;
         var urls= js.data[i].images.original.url;
+        var slugs = js.data[i].slug;
         $(".container").append("<img class= center-block images src= "+urls +">");
-        // or use your data here by calling yourFunction(data);
+        $(".container").append("<p class= lead style= text-align:center; > "+slugs+"</p>");
     }}
-);
+);}
+function random(){
+    var result ="https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC";
+    var js;
+    $.getJSON(result, 
+    function(data) {
+        js = data
+        var urls = js.data.image_url;
+        console.log(urls);
+        $(".container").append("<img class= center-block images src= "+urls +">");
+});}
+function trending(){
+    var result ="https://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC";
+    var js;
+    $.getJSON(result, 
+    function(data) {
+        for (var i=0;i<10;i++){
+        js = data;
+        var urls = js.data[i].images.original.url;
+        var slugs = js.data[i].slug;
+     $(".container").append("<img class= center-block images src= "+urls +">");
+     $(".container").append("<p class= lead style= text-align:center; > "+slugs+"</p>");
+     
+    }
+});}
 
-}
+
 function reset(){
     window.location.reload();
 }
