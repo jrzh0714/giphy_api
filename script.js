@@ -8,7 +8,7 @@ function search(){
         js = data;
         var urls= js.data[i].images.original.url;
         var slugs = js.data[i].slug;
-        $(".container").append("<img class= center-block images src= "+urls +">");
+        $(".container").append("<div class= center-block ><img class= img-responsive src= "+urls +"></div>");
         $(".container").append("<p class= lead style= text-align:center; > "+slugs+"</p>");
     }}
 );}
@@ -20,7 +20,7 @@ function random(){
         js = data
         var urls = js.data.image_url;
         console.log(urls);
-        $(".container").append("<img class= center-block images src= "+urls +">");
+        $(".container").append("<div class= center-block ><img class= img-responsive src= "+urls +"></div>");
 });}
 function trending(){
     var result ="https://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC";
@@ -31,13 +31,15 @@ function trending(){
         js = data;
         var urls = js.data[i].images.original.url;
         var slugs = js.data[i].slug;
-     $(".container").append("<img class= center-block images src= "+urls +">");
+     $(".container").append("<div class= center-block ><img class= img-responsive src= "+urls +"></div>");
      $(".container").append("<p class= lead style= text-align:center; > "+slugs+"</p>");
      
     }
 });}
 
-
+function erase(){
+    $("#result").empty();
+}
 function reset(){
     window.location.reload();
 }

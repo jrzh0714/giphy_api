@@ -13,14 +13,14 @@
     <p class="text-center lead" style="font-size:50px;">
         Choose Your Gif
     </p>
-    <form action="javascript:search();" class="text-center">
+    <form action="javascript:search();" class="text-center form">
   <input id="query" type="text" size="35" placeholder="Choose a gif theme"><br>
   <input type="submit" value="Submit"  class="lead" >
   <input type="button" value="Random GIF!" onclick="random();" class="lead" >
   <input type="button" value="Trending GIF!" onclick="trending();" class="lead" >
-  <input type="button" value="Reset" onclick="window.location.reload()" class="lead">
+  <input type="button" value="Reset" onclick="erase();" class="lead">
 </form>
-    <div class="container">
+    <div class="container" id="result">
     </div>
 </body>
 </html>

@@ -1,9 +1,18 @@
 .center-block{
     margin:50px;
-    border:2px solid black;
+    border:2px solid #C3C6C7;
+    background-color:grey;
 }
 #query{
     margin: 20px;
     height:40px;
 
+}
+.img-responsive {
+    margin: 0 auto;
+}
+.form{
+    padding-bottom: 40px;
+    border-bottom: 2px solid #C3C6C7;
+    background-color:#D7DADB;
 }
